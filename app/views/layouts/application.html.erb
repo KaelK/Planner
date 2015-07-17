@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>TeamPlanner</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Team Planner</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <%= csrf_meta_tags %>
+  </head>
+ <body>
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="http://localhost:3000/">Home</a></li>
+  <li role="presentation"><a href="#">Contact Info</a></li>
+  <li role="presentation"><a href="#">Calendar</a></li>
+</ul>
 <%= yield %>
 
 </body>

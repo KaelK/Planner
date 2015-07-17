@@ -1,1 +1,22 @@
-Team Planner
+<div class="jumbotron">
+  <div class="container">
+   <div class="well well-lg">
+    <div class="mainWords">
+     <h1>Welcome to the team.</h1>
+     <h2> We're not exactly sure what the team is or what it does, but you're certainly welcome.</h2>
+    </div>
+    </div>
+    <p class="jumbotron-text">Here you can plan things and stuff in ways that are already being used by dozens of better websites, but since you're already here you might as well use this one.</p>
+    <p><a class="btn btn-primary jumbotron-button" href="http://localhost:3000/users/sign_in" role="button">Sign in &raquo;</a> <a class="btn btn-primary jumbotron-button" href="http://localhost:3000/users/sign_up" role="button">Join the team &raquo;</a></p>
+      
+    <% if signed_in? %>
+        <div>
+            <div class="well well-sm"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></div>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+    
+</div>

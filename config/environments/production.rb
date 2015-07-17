@@ -14,6 +14,20 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+
+  config.action_mailer.default_url_options = { :host => 'team-planner.herokuapp.com', :protocol => 'http' }
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+     :address => "smtp.gmail.com",
+     :port => 587,
+     :authentication => :plain,
+     :enable_starttls_auto => true,
+     :user_name => 'pgss.ruby.on.rails@gmail.com',
+     :password => 'my test password'
+  }
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
