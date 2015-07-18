@@ -28,7 +28,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem "devise"
 # Use unicorn as the app server
 # gem 'unicorn'
-gem "mailcatcher"
+gem "mailcatcher", '= 0.2.4'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
