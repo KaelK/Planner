@@ -5,7 +5,7 @@
 .jumbotron-text{
   border-color: black;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 25px;
+  font-size: 27px;
   line-height: 30px;
   color: black;
 
@@ -28,12 +28,18 @@
   color: Navy;
 }
 
+.loginButton{
+  padding: 0px 0px;
+  background-color: gray;
+  border-color:gray;
+}
 .jumbotron-button{
   padding: 12px 25px;
   font-size: 20px;
   color: white;
   background-color: black;
   border-color: white;
+  width: 180px;
 }
 
 /*.navbar{
