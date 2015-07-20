@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  match "/calendar", to: "statics#calendar", via: :get
   devise_for :users
   resources :users
 

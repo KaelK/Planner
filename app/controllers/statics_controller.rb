@@ -12,6 +12,9 @@ class StaticsController < ApplicationController
   def show
   end
 
+  def calendar
+  end
+
   # GET /statics/new
   def new
     @static = Static.new
