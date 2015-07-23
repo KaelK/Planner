@@ -1,0 +1,41 @@
+<div class="jumbotron">
+<div class="container">
+<div class="well">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong class="post">Post by <%= @post.user.first_name%>:</strong>
+   
+   <%= @post.content %>
+</p>
+<p>
+  <strong>Replies:</strong>
+<% @post.replies.each do |reply| %>
+	<div class="post"><%= reply.user.first_name %>: <%= reply.content %></div>
+<% end %>
+</p>
+
+<br><br>
+
+<%= form_for(@new_reply) do |f| %>
+
+	<div class="field">
+		<%= f.label :content %><br>
+		<%= f.text_field :content %><br>
+	</div>
+	<div class="field" style="display: none">
+		<%= f.number_field :user_id, value: current_user.id %>
+	</div>
+	<div class="field" style="display: none">
+		<%= f.number_field :post_id, value: @post.id %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+
+<% end %>
+
+<%= link_to 'Back', posts_path %>
+</div>
+</div>
+</div>

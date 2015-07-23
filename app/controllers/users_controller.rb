@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_self, only: [:destroy, :edit, :update]
 
   # GET /users
   # GET /users.json
@@ -65,6 +66,13 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def ensure_self
+      unless signed_in? and current_user == @user
+        flash[:alert] = "You are not allowed to take the requested action!"
+        redirect_to users_path and return
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

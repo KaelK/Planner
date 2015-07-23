@@ -1,0 +1,15 @@
+<div class="jumbotron">
+<div class="container">
+<div class="well">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Your Reply:</strong>
+  <%= @reply.content %>
+</p>
+
+<%= link_to 'Edit', edit_reply_path(@reply) %> |
+<%= link_to 'Done', @reply.post %>
+</div>
+</div>
+</div>

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  resources :replies
+
+  resources :posts
+
   match "/calendar", to: "statics#calendar", via: :get
+  match "/messages", to: "statics#messages", via: :get
   devise_for :users
   resources :users
 

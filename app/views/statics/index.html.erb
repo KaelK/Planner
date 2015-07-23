@@ -7,19 +7,14 @@
     </div>
     </div>
     <p class="jumbotron-text">Here you can plan things and stuff in ways that are already being used by dozens of better websites, but since you're already here you might as well use this one.</p>
-    <p> <button class= "loginButton"><%= link_to "Sign in", new_user_session_path, class: "btn btn-primary jumbotron-button" %></button> <button class="loginButton"><%= button_to "Join the team", new_user_registration_path, method: :get, class: "btn btn-primary jumbotron-button" %></button></p>
-
-    
-  
-
-    
-    
-      
+    <p> <button class= "loginButton"><%= button_to "Sign in", new_user_session_path, class: "btn btn-primary jumbotron-button" %></button> <button class="loginButton"><%= button_to "Join the team", new_user_registration_path, method: :get, class: "btn btn-primary jumbotron-button" %></button>
+     
     <% if signed_in? %>
-        <div>
-            <div class="well well-sm"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></div>
-        </div>
+        
+            <button class="loginButton"><%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-primary jumbotron-button" %></button>
+        
     <% end %>
+    </p>
   </div>
 </div>
 

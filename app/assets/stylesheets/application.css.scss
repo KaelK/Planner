@@ -21,8 +21,9 @@
 .jumbotron-text{
   border-color: black;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 27px;
-  line-height: 30px;
+  font-size: 40px;
+  line-height: 35px;
+  font-weight: 6;
   color: black;
 
 }
@@ -32,10 +33,10 @@
   border-color: black;
   border-width: 10px;
 }
-
-.well-sm{
-  background-color: DimGray;
+.well{
+  background-color: LightGray;
   border-color: black;
+  border-width: 10px;
 }
 
 .mainWords{
@@ -62,9 +63,17 @@
   margin-bottom: 0px;
 }
 */
-.container{
-	
-	background-color: gray;
-  border-color: black;
+
+.post{
+  color: black;
+  background-color: LightGray;
+  font-size: 22px;
+  font-weight: 7;
+}
+.links{
+  color: black;
+  background-color: LightGray;
+  font-size: 18px;
+  font-weight: 5;
 }
 

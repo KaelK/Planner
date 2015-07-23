@@ -1,11 +1,14 @@
-<h1>Listing users</h1>
+<div class="jumbotron">
+<div class="container">
+<div class="well">
+<h1>Members of the Team:</h1>
 
 <table>
   <thead>
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Phone number</th>
+      <th class="post">First name | </th>
+      <th class="post">| Last name | </th>
+      <th class="post">| Phone number</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,12 +16,11 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.phone_number %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="post"><%= user.first_name %></td>
+        <td class="post"><%= user.last_name %></td>
+        <td class="post"><%= user.phone_number %></td>
+        <td class="links"> <%= link_to 'Edit', edit_user_path(user) %> |</td>
+        <td class="links"> | <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,6 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+</div>
+</div>
+</div>

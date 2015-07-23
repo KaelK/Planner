@@ -15,7 +15,22 @@
   <li role="presentation" class="active"><a href="/">Home</a></li>
   <li role="presentation"><a href="/users">Contact Info</a></li>
   <li role="presentation"><a href="/calendar">Calendar</a></li>
+  <li role="presentation"><a href="/posts">Message Board</a></li>
+
 </ul>
+
+<% if notice %>
+  <div class="alert alert-info">
+    <%= notice %>
+  </div>
+<% end %>
+
+<% if alert %>
+  <div class="alert alert-danger">
+    <%= alert %>
+  </div>
+<% end %>
+
 <%= yield %>
 
 </body>
