@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :ensure_self, only: [:destroy, :edit, :update, :show]
+  before_action :ensure_self, only: [:destroy, :edit, :update]
+  before_action :signed_in, only: [:show]
 
   respond_to :html
 
@@ -40,6 +41,13 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_with(@post)
+  end
+
+  def signed_in
+    unless signed_in?
+      flash[:alert] = "You must be signed in to take the requested action!"
+      redirect_to posts_path and return
+    end
   end
 
   def ensure_self
